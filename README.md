@@ -10,34 +10,8 @@ pip install -r requirements.txt
 
 python manage.py migrate
 
-4️⃣ Create Superuser (for admin access)
 python manage.py createsuperuser
 
-
-👉 Enter username, email, password.
-
-5️⃣ Register Apps in settings.py
-
-Open ecommerce/settings.py → ensure your apps are listed under INSTALLED_APPS:
-
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-
-    # Your apps
-    'core',
-    'accounts',
-    'products',
-    'cart',
-    'orders',
-    'payments',
-]
-
-6️⃣ Run Development Server
 python manage.py runserver
 
 
