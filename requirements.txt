@@ -1,0 +1,11 @@
+Django>=5.0,<6.0
+djangorestframework>=3.15   # if you want APIs (optional)
+Pillow>=10.0                # for image uploads (Product images, Profile pics)
+django-crispy-forms>=2.1    # for better Bootstrap form rendering
+crispy-bootstrap5>=2024.2   # Bootstrap 5 integration
+stripe>=8.0.0               # if using Stripe for payments
+gunicorn>=22.0.0            # production WSGI server (Linux deployment)
+psycopg2-binary>=2.9.9      # PostgreSQL driver (if using Postgres)
+mysqlclient>=2.2.4          # MySQL driver (optional, if MySQL)
+python-decouple>=3.8        # manage environment variables securely
+django-allauth>=65.0        # user authentication & social login

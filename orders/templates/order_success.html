@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+{% block title %}Order Placed | E-Shop{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="text-success">✅ Order Successfully Placed!</h1>
+    <p>Your order ID is <strong>#{{ order.id }}</strong>.</p>
+    <p>Total Amount: <strong>${{ order.total_price }}</strong></p>
+    <a href="{% url 'payments:process_payment' order.id %}" class="btn btn-primary mt-3">Proceed to Payment</a>
+</div>
+{% endblock %}

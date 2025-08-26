@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+{% block title %}Order Summary | E-Shop{% endblock %}
+
+{% block content %}
+<h2>Order Summary</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product</th><th>Quantity</th><th>Price</th><th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ item.product.price }}</td>
+            <td>${{ item.get_subtotal }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h4>Total: ${{ total }}</h4>
+<a href="{% url 'orders:place_order' %}" class="btn btn-success">Place Order</a>
+{% endblock %}
