@@ -1,39 +1,12 @@
-🚀 Execution Steps
-1️⃣ Setup Virtual Environment
+git clone https://github.com/Baskearavind/django.git
 
-Inside your project folder (ecom in your case):
+cd django
 
 python -m venv venv
 
-
-Activate it:
-
-Windows (CMD):
-
 venv\Scripts\activate
 
-
-PowerShell:
-
-venv\Scripts\Activate.ps1
-
-
-Linux/Mac:
-
-source venv/bin/activate
-
-2️⃣ Install Dependencies
-
-Make sure you have requirements.txt. Then run:
-
 pip install -r requirements.txt
-
-
-(If requirements.txt is missing, install Django manually: pip install django pillow)
-
-3️⃣ Database Setup
-
-Run migrations to create the default tables:
 
 python manage.py migrate
 
